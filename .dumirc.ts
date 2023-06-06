@@ -1,6 +1,5 @@
 import { defineConfig } from "dumi";
 
-const repo = "agul-library"; // 项目名(也就是你的仓库名)
 export default defineConfig({
   outputPath: "docs-dist",
   themeConfig: {
@@ -104,8 +103,4 @@ export default defineConfig({
       },
     ],
   ],
-  title: "@iauto/components",
-  mode: "site",
-  base: process.env.NODE_ENV === "production" ? `/${repo}/` : "/",
-  publicPath: process.env.NODE_ENV === "production" ? `/${repo}/` : "/",
 });
