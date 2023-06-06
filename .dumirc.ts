@@ -1,7 +1,13 @@
 import { defineConfig } from "dumi";
 
+const repo = "agul-library";
 export default defineConfig({
-  outputPath: "docs-dist",
+  resolve: {
+    docDirs: ["does1"],
+  },
+  outputPath: "does",
+  hash: true,
+  // 使用 webpack 5进行构建。
   themeConfig: {
     name: "@iauto/components",
     logo: false,
@@ -103,4 +109,6 @@ export default defineConfig({
       },
     ],
   ],
+  base: `/${repo}/`,
+  publicPath: `/${repo}/`,
 });
